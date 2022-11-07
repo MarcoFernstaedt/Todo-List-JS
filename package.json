@@ -1,0 +1,26 @@
+{
+  "name": "todo-list-js",
+  "version": "1.0.0",
+  "description": "a simple todo list",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MarcoFernstaedt/Todo-List-JS.git"
+  },
+  "author": "Marco Fernstaedt",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MarcoFernstaedt/Todo-List-JS/issues"
+  },
+  "homepage": "https://github.com/MarcoFernstaedt/Todo-List-JS#readme",
+  "devDependencies": {
+    "css-loader": "^6.7.1",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0"
+  }
+}
