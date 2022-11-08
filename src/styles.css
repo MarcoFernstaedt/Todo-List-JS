@@ -40,8 +40,9 @@ header {
     align-items: stretch;
     height: 100vh;
     width: 25vw;
+    border-right: 2px solid gold;
     padding: 40px;
-    background: black;
+    background: rgb(0, 0, 47);
 }
 
 .sidebar div {
@@ -51,6 +52,19 @@ header {
 ul {
     /* list-style: none; */
     margin-left: 20px;;
+}
+
+li {
+    list-style: none;
+    width: 60%;
+    padding-left: 20px;
+    border-radius: 180px;
+}
+
+li:hover {
+    cursor: pointer;
+    color: black;
+    background: white;
 }
 
 .nav-default {
@@ -64,34 +78,56 @@ ul {
     margin-bottom: 25px;
 }
 
+.add-project {
+    width: 60%;
+    border-radius: 179px;
+    padding-left: 20px;
+}
+
 .add-project:hover {
-    cursor: pointer;
+    cursor: pointer;   
+    color: black; 
+    background: white;
+}
+
+.project-details {
+    /* project detials here */
 }
 
 .content {
     display: flex;
     flex-direction: column;
+    align-items: center;
     grid-column: 2 / 3;
     grid-row: 2 / 3;
     height: 90vh;
     width: 75vw;
     padding: 40px;
     font-size: 23px;
-    background: rgb(76, 74, 74);
+    border-top: solid 2px gold;
+    background: rgb(27, 27, 27); 
+    /* rgb(36, 36, 36) */
 } 
 
 .todo {
     display: flex;
     justify-content: space-between;
     align-items: stretch;
+    width: 100%;
     border: solid 2px black;
-    padding: 5px 15px ;
-}
-
-.title {
-    border-right: solid 2px black;
+    padding: 5px 15px;
 }
 
 .add-todo {
-    
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 5px 15px;
+    border-radius: 180px;
+    background-color: rgb(60, 60, 60);
+}
+
+.add-todo:hover {
+    cursor: pointer;
+    background-color: rgb(40, 40, 40);
 }

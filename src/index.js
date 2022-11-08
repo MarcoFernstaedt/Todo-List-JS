@@ -1,3 +1,17 @@
 import "./styles.css"
+import addProject from "./add-project"
 
-console.log("./src/index.js")
+function main() {
+    const addProjectBtn = document.querySelector(".add-project")
+
+    addProjectBtn.addEventListener("click", addProject)
+}
+
+main()
+
+// date formating 
+// npm install date-fns --save
+// https://github.com/date-fns/date-fns/blob/main/docs/gettingStarted.md
+
+// WEB browser storage API
+// https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API
