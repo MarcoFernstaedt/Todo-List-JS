@@ -1,10 +1,18 @@
 import "./styles.css"
 import addProject from "./add-project"
+import projectFactory from "./projects"
 
 function main() {
     const addProjectBtn = document.querySelector(".add-project")
+    const addTodoBtn = document.querySelector(".add-todo")
+    // const x = projectFactory(["help"], [14])
+    // console.table(x)
 
     addProjectBtn.addEventListener("click", addProject)
+
+    addTodoBtn.addEventListener("click", (e) => {
+        console.log("working")
+    })
 }
 
 main()
