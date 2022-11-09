@@ -4,11 +4,7 @@ import addProject from "./add-project"
 function main() {
     const addProjectBtn = document.querySelector(".add-project")
 
-    addProjectBtn.addEventListener("click", () => {
-        const form = document.querySelector("form")
-        form.style.display = "flex"
-        addProject
-    })
+    addProjectBtn.addEventListener("click", addProject)
 }
 
 main()
