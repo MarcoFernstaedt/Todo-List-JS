@@ -1,19 +1,22 @@
 function addProject() {
     const projects = document.getElementById("projects")
-
     const header = document.querySelector(".header-title")
 
     const projectList = document.createElement("ul")
 
-    let projectName = prompt("What is the name of this. Project?")
+    const projectName = document.getElementById("project-name")
 
     const newProject = document.createElement("li")
-    newProject.textContent = `${projectName}`
+    newProject.textContent = projectName.value
     projectList.appendChild(newProject)
 
     newProject.addEventListener("click", () => {
-        header.textContent = `${projectName}`
+        // header.textContent = `${name}`
+        console.log("works")
     })
+
+    const form = document.querySelector("form")
+    form.style.display = "none"
 
     projects.appendChild(projectList)
 }
