@@ -17,7 +17,7 @@ body {
     grid-template-rows: 3;
     height: 100vh;
     width: 100vw;
-    background: gray;
+    background: black;
     color: white
 }
 
@@ -122,48 +122,67 @@ input {
 .content {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    grid-column: 2 / 3;
-    grid-row: 2 / 3;
     height: 90vh;
     width: 75vw;
     overflow-y: auto;
     padding: 40px;
     font-size: 23px;
     border-top: solid 2px gold;
-    background: rgb(27, 27, 27); 
+    background-color: black;
+    /* background: rgb(27, 27, 27);  */
     /* rgb(36, 36, 36) */
 } 
 
-.todos {
+table {
     display: flex;
-    justify-content: space-between;
-    align-items: stretch;
-    width: 100%;
-    border: solid 2px black;
-    padding: 5px 15px;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    height: 800px;
+    padding: 25px;
 }
 
-.add-todo {
-    display: flex;
+td, th {
+    width: 500px;
+    border: solid 1px gold;
+}
+
+th {
+    height: 60px;
+    border: solid 4px gold;
+}
+
+.todo-info {
+    display: none;
+    flex-direction: column;
     justify-content: center;
-    width: 100%;
-    margin: 5px 15px;
-    border-radius: 180px;
-    background-color: rgb(60, 60, 60);
+    align-items: center;
+    border: solid 1px gold;
+    margin: 40px;
+    background-color: rgb(0, 0, 47);
 }
 
-.add-todo:hover {
-    cursor: pointer;
-    background-color: rgb(40, 40, 40);
+.info-input {
+    padding: 20px;
+    background-color: navy;
 }
 
 .create-todo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 25%
-    width: 100%;
+    display: inline;
+    cursor: pointer;
+    font-size: large;
+    height: 70px;
+    width: 200px;
+    border: solid 1px gold;
+    border-radius: 4rem;
+    color: white;
+    background-color: navy;
 }
 
-/* .todo-input */
+.create-todo:hover {
+    color: black;
+    background-color: white;
+}

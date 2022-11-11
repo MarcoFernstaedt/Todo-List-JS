@@ -1,17 +1,21 @@
 import "./styles.css"
 import addProject from "./add-project"
 import projectFactory from "./projects"
+import createToDo from "./todos"
 
 function main() {
     const addProjectBtn = document.querySelector(".add-project")
-    const addTodoBtn = document.querySelector(".add-todo")
-    // const x = projectFactory(["help"], [14])
-    // console.table(x)
+    const createToDoBtn = document.querySelector(".create-todo")
 
     addProjectBtn.addEventListener("click", addProject)
+    createToDoBtn.addEventListener("click", (e) => {
+        const toDoInfoBox = document.querySelector(".todo-info")
 
-    addTodoBtn.addEventListener("click", (e) => {
-        console.log("working")
+        let none = toDoInfoBox.style.display = "flex"
+        if (none !== "flex") {
+            none = "flex"
+        }
+        createToDo()
     })
 }
 

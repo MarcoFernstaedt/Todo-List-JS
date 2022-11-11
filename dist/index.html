@@ -30,14 +30,22 @@
             </div>
         </nav>
         <div class="content">
-            <div class="todos">
-                <div class="title">Title</div>
-                <div class="date">mm/dd/yyyy</div>
+            <table>
+                <th>Objective</th>
+                <th>Due Date</th>
+                <tr>
+                    <td>find todo</td>
+                    <td>21-45-2232</td>
+                </tr>
+            </table>
+            <div class="todo-info">
+                <h1>Create To-Do</h1>
+                <div class="info-input">
+                    <input id="todo-input" type="text" placeholder="What is your To-Do" />
+                    <input id="date-input" type="text" />
+                </div>
             </div>
-            <div class="create-todo">
-                <nput class="todo-input" type="text" aria-placeholder="What is your ToDo?" />
-                <div class="add-todo">Add ToDo</div>
-            </div>
+            <button class="create-todo">Create To-Do</button>
         </div>
     </div>
     <script src="main.js"></script>
