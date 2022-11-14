@@ -1,10 +1,17 @@
-function projectFactory(todo, dueDates) {
-    let project = {
-        todo: todo,
-        dueDates: dueDates,
+function projectFactory(name, dueDate) {
+    let Project = {
+        name,
+        todo: [],
+        dueDate,
+        addDescription(projectDescription) {
+            return this.description = projectDescription
+        },
+        addTodo(todo) {
+            this.todo.push(todo)
+        }
     }
 
-    return { todo, dueDates }
+    return Project
 }
 
 export default projectFactory

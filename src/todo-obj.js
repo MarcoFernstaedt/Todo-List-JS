@@ -1,10 +1,10 @@
 function todoObj(todo, dueDate) {
-    let TodoObject = {
+    let ToDo = {
         todo: todo,
         dueDate: dueDate,
     }
 
-    return TodoObject;
+    return ToDo;
 }
 
 export default todoObj
