@@ -46,7 +46,6 @@ function main() {
             } else if (project === value) {
                 projectList[i]["todo"].push(newToDo)
                 toDoInfoBox.style.display = "none"
-                console.log(projectList[i]["todo"])
             }
         }
 
