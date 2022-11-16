@@ -1,30 +1,27 @@
 import todoObj from "./todo-obj"
+import { projectList } from "./index"
 
-function createToDo() {
-    const todoInput = document.querySelector("#todo-input")
-    let TodoValue = todoInput.value
-    const dateInput = document.querySelector("#date-input")
-    let dataValue = dateInput.value
-
-    if (TodoValue === "" && dataValue === "" || TodoValue === "" ||
-        dataValue === "") {
-        return;
+function findProj(projectName) {
+    for (let i = 0; i < projectList.length; i++) {
+        if (projectList[i]["name"] === projectName) {
+            return projectList[i]
+        }
     }
+}
 
-    let newTodo = todoObj(TodoValue, dataValue)
-
+function createToDo(todoValue, dateValue) {
     const table = document.querySelector("table")
+    const newTableData = document.createElement('tr')
+    const todo = document.createElement("td")
+    todo.textContent = todoValue
+    newTableData.appendChild(todo)
 
-    const newTableElem = document.createElement("tr")
-    const newTodoData = document.createElement("td")
-    newTodoData.textContent = newTodo["todo"]
-    newTableElem.appendChild(newTodoData)
-    const newDueDateData = document.createElement("td")
-    newDueDateData.textContent = newTodo["dueDate"]
-    newTableElem.appendChild(newDueDateData)
+    const date = document.createElement("td")
+    date.textContent = dateValue
+    newTableData.appendChild(date)
 
-    table.appendChild(newTableElem)
+    table.appendChild(newTableData)
 
 }
 
-export default createToDo
+export default createToDo 

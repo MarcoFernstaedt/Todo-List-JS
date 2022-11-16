@@ -4,11 +4,18 @@ import projectFactory from "./projects"
 import createToDo from "./todos"
 import todoObj from "./todo-obj"
 
+export const projectList = []
+
 function main() {
+    const header = document.querySelector(".header-title")
     const addProjectBtn = document.querySelector(".add-project")
     const createToDoBtn = document.querySelector(".create-todo")
-
-    const projectList = []
+    const listItems = document.querySelectorAll("li")
+    listItems.forEach(listItem => {
+        listItem.addEventListener("click", (e) => {
+            header.textContent = listItem.textContent
+        })
+    });
 
     addProjectBtn.addEventListener("click", (e) => {
         const projectInput = document.querySelector("input")
@@ -17,7 +24,7 @@ function main() {
         if (name !== "") {
             addProject()
             let newProject = projectFactory(name, "12-10-2022")
-            projectList.push(newProject, "24")
+            projectList.push(newProject)
         } else {
             return;
         }
@@ -26,22 +33,18 @@ function main() {
     createToDoBtn.addEventListener("click", (e) => {
         const toDoInfoBox = document.querySelector(".todo-info")
 
-        let none = toDoInfoBox.style.display = "flex"
-        if (none !== "flex") {
-            none = "flex"
-        }
+        toDoInfoBox.style.display = "flex"
 
         const todoInput = document.querySelector("#todo-input")
-        let TodoValue = todoInput.value
+        let todoValue = todoInput.value
         const dateInput = document.querySelector("#date-input")
         let dataValue = dateInput.value
 
-        let newToDo = todoObj(TodoValue, dataValue)
-        const header = document.querySelector(".header-title")
+        let newToDo = todoObj(todoValue, dataValue)
         let value = header.textContent
         for (let i = 0; i < projectList.length; i++) {
             let project = projectList[i]["name"]
-            if (TodoValue === "") {
+            if (todoValue === "") {
                 return;
             } else if (project === value) {
                 projectList[i]["todo"].push(newToDo)
@@ -49,7 +52,8 @@ function main() {
             }
         }
 
-        createToDo()
+        createToDo(todoValue, dataValue)
+        console.log(projectList)
     })
 }
 
