@@ -54,7 +54,8 @@ function main() {
                 projectList[i]["todo"].push(newToDo)
                 toDoInfoBox.style.display = "none"
 
-
+                const tBody = document.querySelector("tbody")
+                tBody.textContent = ""
                 let obj = findObj(project)
                 for (let i = 0; i < obj["todo"].length; i++) {
                     let todos = obj["todo"][i]["todo"]
