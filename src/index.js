@@ -40,6 +40,9 @@ function main() {
         const dateInput = document.querySelector("#date-input")
         let dataValue = dateInput.value
 
+        todoInput.value = ""
+        dateInput.value = ""
+
         let newToDo = todoObj(todoValue, dataValue)
         let value = header.textContent
         for (let i = 0; i < projectList.length; i++) {
@@ -49,11 +52,12 @@ function main() {
             } else if (project === value) {
                 projectList[i]["todo"].push(newToDo)
                 toDoInfoBox.style.display = "none"
+                createToDo(todoValue, dataValue)
+                todoInput.textContent = ""
+                dateInput.textContent = ""
+                console.log(projectList)
             }
         }
-
-        createToDo(todoValue, dataValue)
-        console.log(projectList)
     })
 }
 

@@ -9,6 +9,10 @@ function addProject() {
 
     const newProject = document.createElement("li")
     newProject.textContent = projectName;
+    newProject.addEventListener("click", (e) => {
+        const header = document.querySelector(".header-title")
+        header.textContent = newProject.textContent
+    })
 
     projectList.appendChild(newProject)
 
