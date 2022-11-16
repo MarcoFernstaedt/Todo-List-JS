@@ -63,6 +63,7 @@ li {
     height: 20px;
     width: 180px;
     padding-left: 5px;
+    border: solid .5px gold;
     border-radius: 180px;
     resize: none;
 }

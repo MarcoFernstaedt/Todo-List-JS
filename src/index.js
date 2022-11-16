@@ -3,6 +3,7 @@ import addProject from "./add-project"
 import projectFactory from "./projects"
 import createToDo from "./todos"
 import todoObj from "./todo-obj"
+import findObj from "./findObj"
 
 export const projectList = []
 
@@ -52,10 +53,14 @@ function main() {
             } else if (project === value) {
                 projectList[i]["todo"].push(newToDo)
                 toDoInfoBox.style.display = "none"
-                createToDo(todoValue, dataValue)
-                todoInput.textContent = ""
-                dateInput.textContent = ""
-                console.log(projectList)
+
+
+                let obj = findObj(project)
+                for (let i = 0; i < obj["todo"].length; i++) {
+                    let todos = obj["todo"][i]["todo"]
+                    let date = obj["todo"][i]["dueDate"]
+                    createToDo(todos, date)
+                }
             }
         }
     })

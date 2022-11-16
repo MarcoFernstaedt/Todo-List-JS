@@ -1,16 +1,5 @@
-import todoObj from "./todo-obj"
-import { projectList } from "./index"
-
-function findProj(projectName) {
-    for (let i = 0; i < projectList.length; i++) {
-        if (projectList[i]["name"] === projectName) {
-            return projectList[i]
-        }
-    }
-}
-
 function createToDo(todoValue, dateValue) {
-    const table = document.querySelector("table")
+    const tBody = document.querySelector("tbody")
     const newTableData = document.createElement('tr')
     const todo = document.createElement("td")
     todo.textContent = todoValue
@@ -20,7 +9,7 @@ function createToDo(todoValue, dateValue) {
     date.textContent = dateValue
     newTableData.appendChild(date)
 
-    table.appendChild(newTableData)
+    tBody.appendChild(newTableData)
 
 }
 
