@@ -4,8 +4,17 @@ import projectFactory from "./projects"
 import createToDo from "./todos"
 import todoObj from "./todo-obj"
 import findObj from "./findObj"
+import upcomingObjFolder from "./upcomingObj"
 
 export const projectList = []
+
+const Today = upcomingObjFolder("Today")
+const ThisWeek = upcomingObjFolder("This Week")
+const ThisMonth = upcomingObjFolder("This Month")
+
+projectList.push(Today, ThisWeek, ThisMonth)
+
+console.log(projectList)
 
 function main() {
     const header = document.querySelector(".header-title")
@@ -61,6 +70,7 @@ function main() {
                     let todos = obj["todo"][i]["todo"]
                     let date = obj["todo"][i]["dueDate"]
                     createToDo(todos, date)
+                    console.log(projectList)
                 }
             }
         }
