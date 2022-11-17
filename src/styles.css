@@ -148,6 +148,10 @@ table {
     padding: 25px;
 }
 
+tbody {
+    overflow-y: scroll;
+}
+
 td, th {
     width: 500px;
     border: solid 1px gold;
