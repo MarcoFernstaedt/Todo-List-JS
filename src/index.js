@@ -6,20 +6,24 @@ import todoObj from "./todo-obj"
 import findObj from "./findObj"
 import upcomingObjFolder from "./upcomingObj"
 
+const upcomingFolders = []
 export const projectList = []
 
 const Today = upcomingObjFolder("Today")
 const ThisWeek = upcomingObjFolder("This Week")
 const ThisMonth = upcomingObjFolder("This Month")
 
-projectList.push(Today, ThisWeek, ThisMonth)
 
-console.log(projectList)
+
+upcomingFolders.push(Today, ThisWeek, ThisMonth)
+
+console.log(upcomingFolders)
 
 function main() {
     const header = document.querySelector(".header-title")
     const addProjectBtn = document.querySelector(".add-project")
     const createToDoBtn = document.querySelector(".create-todo")
+
     const listItems = document.querySelectorAll("li")
     listItems.forEach(listItem => {
         listItem.addEventListener("click", (e) => {
@@ -85,3 +89,7 @@ main()
 
 // WEB browser storage API
 // https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API
+
+function removeToDo(todo, dueDate) {
+
+}
