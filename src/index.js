@@ -13,7 +13,10 @@ const Today = upcomingObjFolder("Today")
 const ThisWeek = upcomingObjFolder("This Week")
 const ThisMonth = upcomingObjFolder("This Month")
 
-
+const headerTitle = document.querySelector(".header-title")
+if (headerTitle.textContent === "") {
+    headerTitle.textContent = "Today"
+}
 
 upcomingFolders.push(Today, ThisWeek, ThisMonth)
 
@@ -89,7 +92,3 @@ main()
 
 // WEB browser storage API
 // https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API
-
-function removeToDo(todo, dueDate) {
-
-}
