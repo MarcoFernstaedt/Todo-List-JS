@@ -6,7 +6,7 @@ import todoObj from "./todo-obj"
 import findObj from "./findObj"
 import upcomingObjFolder from "./upcomingObj"
 
-const upcomingFolders = []
+export const upcomingFolders = []
 export const projectList = []
 
 const Today = upcomingObjFolder("Today")
@@ -30,7 +30,10 @@ function main() {
     const listItems = document.querySelectorAll("li")
     listItems.forEach(listItem => {
         listItem.addEventListener("click", (e) => {
-            header.textContent = listItem.textContent
+            let name = listItem.textContent
+            header.textContent = name
+            let upcomingFolder = findObj(name)
+            console.log(upcomingFolder)
         })
     });
 
